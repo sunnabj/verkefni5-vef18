@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+
+  font-family: 'Open Sans', helvetica, arial, sans-serif;
+  font-size: 16px;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1500px;
+  padding: 20px;
+}
+/*Kortin í heild sinni*/
+.cards {
+  background: #eee;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+/*Sérhvert kort. Hlutum er raðað frá topp og niður.*/
+.card { 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #fff;
+  border: 2px;
+  border-radius: 5px;
+  border-color: #aaa;
+  max-width: 470px;
+  max-height: 300px;
+  margin-bottom: 10px;
+  word-break: break-all;
+  overflow: hidden;
+}
+/*Fyrsti hlutir í hverju korti*/
+.card__title {
+  font-size: 22px;
+  line-height: 22px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+/*Næsti hlutur fyrir neðan í korti. Inniheldur texta og mynd, sem raðað er hlið við hlið*/
+.card__content {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  padding: 5px;
+  flex: 1;
+}
+/*Vinstri hlutur í card__content.*/
+.card__text {
+  max-height: 200px;
+  overflow: auto;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+/*Myndin inn í myndahlutnum í card__content*/
+.image__image{
+  display: flex;
+  width: 150px;
+}
+/*Neðsti hlutur í korti. Er flex container sjálfur sem inniheldur list items sem flex items*/
+.card__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-left: 10px;
+  font-weight: bold;
+  list-style: none;
+  min-width: 22%;
+  max-width: 80%;
+  margin-bottom: 5px;
+}
